@@ -1,12 +1,12 @@
 import unittest
 import allure
-from app import app
+from app.app import QuadraticEquationSolver
 
 
 @allure.feature('Юнит тест для подсчета корней квадратного уравнения')
 class Test_roots_quadratic(unittest.TestCase):
     def setUp(self) -> None:
-        self.equation = app.QuadraticEquationSolver(1, 2, 1)
+        self.equation = QuadraticEquationSolver(1, 2, 1)
     
     def test_calculate_discriminant(self) -> None:
         self.assertEqual(self.equation.calculate_discriminant(), 0.)
